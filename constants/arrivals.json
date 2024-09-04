@@ -1,0 +1,71 @@
+[
+  {
+    "id": 1,
+    "slug": "sunbeam-mules",
+    "name": "sunbeam mules",
+    "color": "yellow",
+    "image_url": "https://vaqybtnqyonvlwtskzmv.supabase.co/storage/v1/object/public/e-commerce-track-images/sunbeam-mules/sunbeam-mules-1.jpg",
+    "sale_price": "$85",
+    "price": 68
+  },
+  {
+    "id": 2,
+    "slug": "azure-attitude-shades",
+    "name": "azure attitude shades",
+    "color": "blue",
+    "image_url": "https://vaqybtnqyonvlwtskzmv.supabase.co/storage/v1/object/public/e-commerce-track-images/azure-attitude-shades/azure-attitude-shades-1.jpg",
+    "price": 45
+  },
+  {
+    "id": 3,
+    "slug": "elemental-sneakers",
+    "name": "elemental sneakers",
+    "color": "beige",
+    "image_url": "https://vaqybtnqyonvlwtskzmv.supabase.co/storage/v1/object/public/e-commerce-track-images/elemental-sneakers/elemental-sneakers-1.jpg",
+    "sale_price": "$100",
+    "price": 80
+  },
+  {
+    "id": 4,
+    "slug": "la-baseball-hat",
+    "name": "la-baseball hat",
+    "color": "black",
+    "image_url": "https://vaqybtnqyonvlwtskzmv.supabase.co/storage/v1/object/public/e-commerce-track-images/la-baseball-hat/la-baseball-hat-1.jpg",
+
+    "price": 20
+  },
+  {
+    "id": 5,
+    "slug": "metro-hoodie",
+    "name": "metro hoodie",
+    "color": "black",
+    "image_url": "https://vaqybtnqyonvlwtskzmv.supabase.co/storage/v1/object/public/e-commerce-track-images/metro-hoodie/metro-hoodie-1.jpg",
+    "sale_price": "$90",
+    "price": 81
+  },
+  {
+    "id": 6,
+    "slug": "voyager-hoodie",
+    "name": "voyager hoodie",
+    "color": "green",
+    "image_url": "https://vaqybtnqyonvlwtskzmv.supabase.co/storage/v1/object/public/e-commerce-track-images/voyager-hoodie/voyager-hoodie-1.jpg",
+    "sale_price": "$95",
+    "price": 76
+  },
+  {
+    "id": 7,
+    "slug": "tangerine-mini-tote",
+    "name": "tangerine mini tote",
+    "color": "orange",
+    "image_url": "https://vaqybtnqyonvlwtskzmv.supabase.co/storage/v1/object/public/e-commerce-track-images/tangerine-mini-tote/tangerine-mini-tote-1.jpg",
+    "price": 150
+  },
+  {
+    "id": 8,
+    "slug": "urban-drift-bucket-hat",
+    "name": "urban drift bucket hat",
+    "color": "black",
+    "image_url": "https://vaqybtnqyonvlwtskzmv.supabase.co/storage/v1/object/public/e-commerce-track-images/urban-drift-bucket-hat/urban-drift-bucket-hat-1.jpg",
+    "price": 15
+  }
+]
