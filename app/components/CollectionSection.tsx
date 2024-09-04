@@ -1,5 +1,7 @@
 import Image from "next/image";
-import collections from "@/constants/collections.json";
+import data from "@/lib/data";
+import { Collection } from "@/lib/models/ProductModel";
+import Link from "next/link";
 
 export default function CollectionSection() {
   return (
@@ -9,9 +11,10 @@ export default function CollectionSection() {
           our collections
         </h3>
         <div className=" cursor-pointer w-full h-[520px] grid grid-cols-1 md:grid-cols-2 md:grid-rows-2 gap-2 md:gap-6 ">
-          {collections.map((item) => (
-            <div
-              key={item.collection_id}
+          {data.collections.map((item: Collection) => (
+            <Link
+              href={item.slug}
+              key={item.name}
               className="group  overflow-hidden relative row-span-2 md:odd:row-span-1 border rounded-lg"
             >
               <Image
@@ -28,7 +31,7 @@ export default function CollectionSection() {
                 <h3 className="text-gray-50 text-xl">{item.description}</h3>
               </div>
               <div className="absolute w-full top-0 bg-black h-full p-4 opacity-40 group-hover:opacity-50 transition-all duration-300 "></div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

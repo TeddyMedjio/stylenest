@@ -2,6 +2,7 @@ import arrivals from "@/constants/arrivals.json";
 import { PlusCircleIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import Link from "next/link";
+import data from "@/lib/data";
 
 export default function LastArrivals() {
   return (
@@ -19,10 +20,10 @@ export default function LastArrivals() {
       </div>
       <div className="mt-6">
         <div className="w-full flex items-center flex-wrap gap-6 ">
-          {arrivals.slice(4).map((item) => (
-            <div key={item.id} className="w-[290px] flex-grow group relative">
+          {data.products.slice(0, 4).map((item) => (
+            <div key={item.slug} className="w-[290px] flex-grow  relative">
               <div className=" group relative h-[250px] md:h-[350px] w-full rounded-lg overflow-hidden">
-                <Link href="#">
+                <Link href={`products/${item.slug}`}>
                   <PlusCircleIcon className="z-50 opacity-0 group-hover:opacity-100 absolute left-1/2 top-1/2 -translate-x-1/2 size-10 text-white transition-opacity duration-300" />
                   <span className="bg-black absolute top-0 w-full h-full transition-opacity duration-300 opacity-0 group-hover:opacity-30 "></span>
                   <Image
@@ -35,25 +36,22 @@ export default function LastArrivals() {
                 </Link>
               </div>
               <div className="mt-5">
-                <Link href="#" className="space-y-1">
+                <div className="space-y-1">
                   <p className="text-xs capitalize text-gray-400 font-semibold">
                     {item.color}
                   </p>
                   <p className="capitalize font-medium text-lg text-noire group-hover:text-violet duration-300">
                     {item.name}
                   </p>
-                </Link>
-                <div className="my-2 flex gap-2">
-                  <p className="text-gray-400 font-medium">${item.price}</p>
-                  <p className="text-gray-400 text-xs line-through">
-                    {item.sale_price}
-                  </p>
                 </div>
-                <div
-                  style={{ backgroundColor: `${item.color}` }}
-                  className={` h-4 w-4 rounded-full`}
-                ></div>
               </div>
+              <div className="my-2 flex gap-2">
+                <p className="text-gray-400 font-medium">${item.price}</p>
+              </div>
+              <div
+                style={{ backgroundColor: `${item.color}` }}
+                className={` h-4 w-4 rounded-full`}
+              ></div>
             </div>
           ))}
         </div>

@@ -14,7 +14,7 @@ export default function Hero() {
             harsh elements.
           </p>
         </div>
-        <Button text="Shop now" />
+        <Button href="/shop-all" text="Shop now" />
       </div>
       <div className="hidden md:block flex-1 bg-[url('/fashion.webp')] bg-cover bg-no-repeat bg-left rounded-lg h-[600px]"></div>
     </div>
