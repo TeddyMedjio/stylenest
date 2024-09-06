@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function CollectionSection() {
   return (
-    <div className="py-20 flex items-center justify-center bg-gray-100 rounded-lg">
+    <div className="py-10 flex items-center justify-center bg-gray-100 rounded-lg">
       <div className="w-[90%]">
         <h3 className="text-noire font-semibold text-3xl mb-6 capitalize">
           our collections

@@ -43,7 +43,7 @@ export default function Service() {
           {services.map((item) => (
             <div
               key={item.name}
-              className="w-[350px] flex flex-col items-center justify-center space-y-4 "
+              className="w-full lg:w-[350px] flex flex-col items-center justify-center space-y-4 "
             >
               <div className="bg-blanc rounded-full shadow p-2 border border-gray-100 w-fit ">
                 <Image src={item.icon} width={30} height={30} alt="icon" />

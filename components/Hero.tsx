@@ -1,8 +1,9 @@
 import Button from "./Button";
+import { Caroussel } from "./Caroussel";
 
 export default function Hero() {
   return (
-    <div className=" py-20 flex items-center justify-center">
+    <div className=" py-10 lg:py-20 flex-col lg:flex lg:flex-row items-center justify-center">
       <div className="flex-1 max-w-[500px] md:pr-8 flex flex-col space-y-4 md:space-y-14">
         <div className="space-y-4">
           {" "}
@@ -14,9 +15,12 @@ export default function Hero() {
             harsh elements.
           </p>
         </div>
-        <Button href="/shop-all" text="Shop now" />
+        <Button width="w-fit" href="/shop-all" text="Shop now" />
       </div>
-      <div className="hidden md:block flex-1 bg-[url('/fashion.webp')] bg-cover bg-no-repeat bg-left rounded-lg h-[600px]"></div>
+      {/* <div className="hidden md:block flex-1 bg-[url('/fashion.webp')] bg-cover bg-no-repeat bg-left rounded-lg h-[600px]"></div> */}
+      <div className="flex-1 overflow-hidden h-[400px] lg:h-[600px] flex items-center justify-center">
+        <Caroussel />
+      </div>
     </div>
   );
 }

@@ -5,7 +5,10 @@ export type Product = {
   price: number;
   description: string;
   category: string;
-  colors?: [];
+  color?: [] | string;
+  features: [];
+  fabric: [];
+  shipping: [];
 };
 export type Collection = {
   name: string;
