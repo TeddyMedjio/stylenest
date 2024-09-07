@@ -5,6 +5,7 @@ export type Product = {
   price: number;
   description: string;
   category: string;
+  collection: string;
   color?: [] | string;
   features: [];
   fabric: [];

@@ -6,10 +6,10 @@ import { HomeIcon } from "@heroicons/react/24/outline";
 
 export default function page() {
   return (
-    <div className="py-20">
+    <div>
       <Link
         href="/"
-        className="text-gris text-sm font-semibold p-2 border border-gray-200 rounded-sm lg:flex items-center w-fit hover:text-white hover:bg-violet transition-all duration-400 hidden "
+        className="text-gris text-sm font-semibold p-2 border border-gray-200 rounded-sm lg:flex items-center w-fit hover:text-white hover:bg-violet transition-all duration-300 hidden "
       >
         <HomeIcon className="size-5 mr-2 " />
         Back to Home
@@ -24,7 +24,7 @@ export default function page() {
           {data.products.slice(0, 8).map((item) => (
             <div key={item.slug} className="w-[250px] flex-grow  relative">
               <div className=" group relative h-[250px] md:h-[350px] w-full rounded-lg overflow-hidden">
-                <Link href={`products/${item.slug}`}>
+                <Link href={`/latest-arrivals/${item.slug}`}>
                   <PlusCircleIcon className="z-50 opacity-0 group-hover:opacity-100 absolute left-1/2 top-1/2 -translate-x-1/2 size-10 text-white transition-opacity duration-300" />
                   <span className="bg-black absolute top-0 w-full h-full transition-opacity duration-300 opacity-0 group-hover:opacity-30 "></span>
                   <Image

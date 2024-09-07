@@ -1,9 +1,14 @@
 import Image from "next/image";
-import data from "@/lib/data";
 import { Collection } from "@/lib/models/ProductModel";
 import Link from "next/link";
 
-export default function CollectionSection() {
+async function getCollection() {
+  const res = await fetch("http://localhost:4000/collections");
+  return res.json();
+}
+
+export default async function CollectionSection() {
+  const collections: Collection[] = await getCollection();
   return (
     <div className="py-10 flex items-center justify-center bg-gray-100 rounded-lg">
       <div className="w-[90%]">
@@ -11,9 +16,9 @@ export default function CollectionSection() {
           our collections
         </h3>
         <div className=" cursor-pointer w-full h-[520px] grid grid-cols-1 md:grid-cols-2 md:grid-rows-2 gap-2 md:gap-6 ">
-          {data.collections.map((item: Collection) => (
+          {collections.map((item: Collection) => (
             <Link
-              href={item.slug}
+              href={`/collections/${item.slug}`}
               key={item.name}
               className="group  overflow-hidden relative row-span-2 md:odd:row-span-1 border rounded-lg"
             >

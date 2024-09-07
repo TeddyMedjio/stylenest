@@ -3,7 +3,9 @@ import Button from "@/components/Button";
 import Counter from "@/components/Counter";
 import ProductNotFound from "@/components/ProductNotFound";
 import { Product } from "@/lib/models/ProductModel";
+import { ArrowLeftIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
+import Link from "next/link";
 
 async function getProducts() {
   const res = await fetch("http://localhost:4000/products");
@@ -21,7 +23,14 @@ export default async function ProductDetails({
   }
 
   return (
-    <div className="py-20 w-full grid grid-cols-1 md:grid-cols-2 md:gap-4  lg:gap-8 ">
+    <div className="relative py-20 w-full grid grid-cols-1 md:grid-cols-2 md:gap-4  lg:gap-8 ">
+      <Link
+        href="/latest-arrivals"
+        className="absolute text-gris text-sm font-semibold p-2 border border-gray-200 rounded-sm lg:flex items-center w-fit hover:text-white hover:bg-violet transition-all duration-400 hidden "
+      >
+        <ArrowLeftIcon className="size-5 mr-2 " />
+        Back to Latest Arrivals
+      </Link>
       <div className="relative overflow-hidden rounded-lg md:h-[600px] lg:h-[600px] w-full">
         <Image
           src={product.image_url}

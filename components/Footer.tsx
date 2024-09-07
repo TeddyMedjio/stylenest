@@ -12,7 +12,7 @@ import {
 
 export default function Footer() {
   return (
-    <div className="">
+    <div>
       {/* Newsletter */}
       <div className="flex flex-col gap-5 md:flex-row md:items-center md:justify-between mt-32 mb-20  ">
         <div className="text-center md:text-start">
@@ -104,7 +104,7 @@ export default function Footer() {
         </div>
       </div>
       {/* reseaux sociaux */}
-      <div className="pb-16">
+      <div>
         <Separator
           orientation="vertical"
           className="w-full bg-gray-300 h-[1px] mb-5"
