@@ -1,3 +1,4 @@
+import Discover from "@/components/Discover";
 import ProductNotFound from "@/components/ProductNotFound";
 import { Collection, Product } from "@/lib/models/ProductModel";
 import { PlusCircleIcon } from "@heroicons/react/24/outline";
